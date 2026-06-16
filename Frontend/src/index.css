@@ -220,10 +220,29 @@ body {
     height: auto !important;
     gap: 12px;
     align-items: flex-start !important;
+    position: fixed;
+  }
+
+  .site-navbar {
+    flex-wrap: wrap;
+  }
+
+  .nav-burger {
+    display: flex !important;
+    margin-left: auto;
   }
 
   .nav-actions {
-    justify-content: flex-start !important;
+    display: none !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .nav-mobile-panel {
+    display: flex !important;
+    width: 100%;
   }
 
   .project-navbar {
