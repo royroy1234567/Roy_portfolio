@@ -36,7 +36,7 @@ const SOCIAL_ICONS = [
         <div className="hero-copy" style={{ flex: 1, zIndex: 2, minWidth: 0 }}>
           <ScrollReveal variant="fadeUp" delay={0.1}>
             <p style={{ color: "var(--accent-color)", fontFamily: "'DM Sans', sans-serif", fontSize: "15px", marginBottom: "8px", letterSpacing: "2px" }}>Hi, I am</p>
-            <h2 style={{ color: "var(--text-subtle)", fontFamily: "'DM Sans', sans-serif", fontSize: "18px", fontWeight: 400, margin: "0 0 8px" }}>Carl Roy Gamilla</h2>
+            <h2 style={{ color: "var(--text-subtle)", fontFamily: "'DM Sans', sans-serif", fontSize: "18px", fontWeight: 400, margin: "0 0 8px" }}>Roy Gamilla</h2>
             <h1 style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "clamp(52px, 7vw, 88px)", color: "var(--accent-color)", margin: "0 0 24px", lineHeight: 0.95, letterSpacing: "2px" }}>
               Full Stack<br />Developer
             </h1>

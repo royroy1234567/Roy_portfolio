@@ -49,7 +49,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
           letterSpacing: "3px",
         }}
       >
-        Carl Roy Gamilla
+        Roy Gamilla
       </div>
 
       <button
