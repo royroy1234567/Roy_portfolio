@@ -15,6 +15,7 @@ const SOCIAL_ICONS = [
   return (
     <section
       id="home"
+      className="hero-section"
       style={{
         minHeight: "100vh",
         background: "var(--page-bg)",
@@ -29,10 +30,10 @@ const SOCIAL_ICONS = [
       <div style={{ position: "absolute", bottom: "10%", left: "10%", width: "300px", height: "300px", background: "radial-gradient(circle, rgba(59,130,246,0.05) 0%, transparent 70%)", pointerEvents: "none" }} />
       <div style={{ position: "absolute", inset: 0, opacity: 0.03, backgroundImage: "linear-gradient(var(--accent-color) 1px, transparent 1px), linear-gradient(90deg, var(--accent-color) 1px, transparent 1px)", backgroundSize: "60px 60px", pointerEvents: "none" }} />
 
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", maxWidth: "1200px", margin: "0 auto", paddingTop: "80px" }}>
+      <div className="hero-layout" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%", maxWidth: "1200px", margin: "0 auto", paddingTop: "80px", gap: "48px" }}>
 
         {/* Left */}
-        <div style={{ flex: 1, zIndex: 2 }}>
+        <div className="hero-copy" style={{ flex: 1, zIndex: 2, minWidth: 0 }}>
           <ScrollReveal variant="fadeUp" delay={0.1}>
             <p style={{ color: "var(--accent-color)", fontFamily: "'DM Sans', sans-serif", fontSize: "15px", marginBottom: "8px", letterSpacing: "2px" }}>Hi, I am</p>
             <h2 style={{ color: "var(--text-subtle)", fontFamily: "'DM Sans', sans-serif", fontSize: "18px", fontWeight: 400, margin: "0 0 8px" }}>Carl Roy Gamilla</h2>
@@ -42,7 +43,7 @@ const SOCIAL_ICONS = [
           </ScrollReveal>
 
         <ScrollReveal variant="fadeUp" delay={0.25}>
-  <div style={{ display: "flex", gap: "16px", marginBottom: "32px" }}>
+  <div className="hero-socials" style={{ display: "flex", gap: "16px", marginBottom: "32px", flexWrap: "wrap" }}>
     {SOCIAL_ICONS.map((item, i) => (
       <a
         key={i}
@@ -59,7 +60,7 @@ const SOCIAL_ICONS = [
 </ScrollReveal>
 
           <ScrollReveal variant="fadeUp" delay={0.35}>
-            <div style={{ display: "flex", gap: "16px", marginBottom: "56px" }}>
+            <div className="hero-actions" style={{ display: "flex", gap: "16px", marginBottom: "56px", flexWrap: "wrap" }}>
               <button style={{ background: "var(--accent-color)", color: "var(--accent-text)", border: "none", padding: "14px 36px", fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: "13px", letterSpacing: "1.5px", cursor: "pointer", clipPath: "polygon(10px 0%, 100% 0%, calc(100% - 10px) 100%, 0% 100%)", transition: "all 0.3s" }}>Know More</button>
          <a  href={myCV}
               download="My_CV.pdf"
@@ -75,7 +76,7 @@ const SOCIAL_ICONS = [
           </ScrollReveal>
 
           <ScrollReveal variant="fadeUp" delay={0.45}>
-            <div style={{ display: "flex", gap: "48px" }}>
+            <div className="hero-stats" style={{ display: "flex", gap: "48px", flexWrap: "wrap" }}>
               {STATS.map((s, i) => (
                 <div key={i}>
                   <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "40px", color: "var(--accent-color)", lineHeight: 1 }}>{s.value}</div>
@@ -87,11 +88,12 @@ const SOCIAL_ICONS = [
         </div>
 
    {/* Right Side Flip Card */}
-      <div style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div className="hero-visual" style={{ flex: 1, display: "flex", justifyContent: "center", alignItems: "center", minWidth: 0 }}>
         <ScrollReveal
           variant="fadeLeft"
           delay={0.3}
-          style={{ width: "380px", height: "480px" }}
+          className="hero-card"
+          style={{ width: "380px", height: "480px", maxWidth: "100%" }}
         >
           <div
             onClick={() => setIsFlipped(!isFlipped)}

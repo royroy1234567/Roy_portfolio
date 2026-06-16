@@ -4,7 +4,7 @@ import { SERVICES } from "../data/portfolioData.js";
 
 export default function ServicesSection() {
   return (
-    <section id="tools-&-technologies" style={{ background: "var(--page-bg-alt)", padding: "100px 80px" }}>
+    <section id="tools-&-technologies" className="section-shell" style={{ background: "var(--page-bg-alt)", padding: "100px 80px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <ScrollReveal variant="fadeUp">
           <SectionHeader
@@ -13,7 +13,7 @@ export default function ServicesSection() {
           />
         </ScrollReveal>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2px", marginTop: "60px" }}>
+        <div className="services-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2px", marginTop: "60px" }}>
           {SERVICES.map((service, i) => (
             <ScrollReveal key={i} variant="fadeUp" delay={i * 0.1}>
               <ServiceCard service={service} />

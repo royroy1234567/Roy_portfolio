@@ -5,14 +5,14 @@ const SOCIAL_ICONS = ["𝕏", "in", "Be", "Dr"];
 
 export default function Footer() {
   return (
-    <footer style={{ background: "var(--page-bg-alt)", borderTop: "1px solid var(--border-color)", padding: "60px 80px 40px" }}>
+    <footer className="site-footer" style={{ background: "var(--page-bg-alt)", borderTop: "1px solid var(--border-color)", padding: "60px 80px 40px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <ScrollReveal variant="fadeUp">
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "48px" }}>
+          <div className="footer-layout" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "48px", gap: "32px" }}>
             {/* Left */}
-            <div>
+            <div className="footer-left">
               <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "32px", color: "var(--accent-color)", letterSpacing: "4px", marginBottom: "16px" }}>MAHMOOD</div>
-              <div style={{ display: "flex", gap: "24px" }}>
+              <div className="footer-links" style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
                 {NAV_LINKS.map((link) => (
                   <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
                     style={{ color: "var(--text-soft)", fontSize: "12px", textDecoration: "none", fontFamily: "'DM Sans', sans-serif", transition: "color 0.3s" }}
@@ -24,7 +24,7 @@ export default function Footer() {
             </div>
 
             {/* Right */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end" }}>
+            <div className="footer-right" style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "flex-end" }}>
               <div style={{ display: "flex", gap: "12px" }}>
                 {SOCIAL_ICONS.map((icon, i) => (
                   <div key={i}

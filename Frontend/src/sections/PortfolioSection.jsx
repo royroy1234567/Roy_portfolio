@@ -12,7 +12,7 @@ export default function PortfolioSection() {
     : PORTFOLIO_ITEMS.filter((p) => p.category === activeTab);
 
   return (
-    <section id="portfolio" style={{ background: "var(--page-bg-alt)", padding: "100px 80px" }}>
+    <section id="portfolio" className="section-shell" style={{ background: "var(--page-bg-alt)", padding: "100px 80px" }}>
       <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
         <ScrollReveal variant="fadeUp">
           <SectionHeader title="Portfolio" />
@@ -20,7 +20,7 @@ export default function PortfolioSection() {
 
         {/* Tab bar */}
         <ScrollReveal variant="fadeUp" delay={0.15}>
-          <div style={{ display: "flex", gap: "4px", marginTop: "40px", marginBottom: "48px", flexWrap: "wrap" }}>
+          <div className="portfolio-tabs" style={{ display: "flex", gap: "4px", marginTop: "40px", marginBottom: "48px", flexWrap: "wrap" }}>
             {PORTFOLIO_TABS.map((tab) => (
               <button
                 key={tab}
@@ -45,7 +45,7 @@ export default function PortfolioSection() {
         </ScrollReveal>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
+        <div className="portfolio-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "12px" }}>
           {filtered.map((item, i) => (
             <ScrollReveal key={item.id} variant="fadeUp" delay={i * 0.08}>
               <PortfolioCard item={item} />

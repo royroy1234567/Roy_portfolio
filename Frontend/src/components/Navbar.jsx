@@ -15,6 +15,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
 
   return (
     <nav
+      className="site-navbar"
       style={{
         position: "fixed",
         top: 0, left: 0, right: 0,
@@ -43,7 +44,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
       </div>
 
       {/* Links */}
-      <ul style={{ display: "flex", gap: "36px", listStyle: "none", margin: 0, padding: 0 }}>
+      <ul className="nav-links" style={{ display: "flex", gap: "36px", listStyle: "none", margin: 0, padding: 0, flexWrap: "wrap", justifyContent: "center" }}>
         {NAV_LINKS.map((link) => (
           <li key={link}>
             <a
@@ -66,7 +67,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
         ))}
       </ul>
 
-      <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
+      <div className="nav-actions" style={{ display: "flex", alignItems: "center", gap: "12px", flexWrap: "wrap", justifyContent: "flex-end" }}>
         <button
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
           onClick={onToggleTheme}

@@ -8,6 +8,7 @@ export default function ProjectNavbar({ title, darkMode = false, onToggleTheme }
 
   return (
     <nav
+      className="project-navbar"
       style={{
         background: theme.pageAlt,
         borderBottom: `1px solid ${theme.border}`,
@@ -22,7 +23,7 @@ export default function ProjectNavbar({ title, darkMode = false, onToggleTheme }
       }}
     >
       {/* Left - Back Button */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+      <div className="project-navbar-left" style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
 
         {/* Project Title */}
         <h1 style={{ fontSize: '24px', fontWeight: 'bold', color: theme.text, margin: 0 }}>
@@ -31,7 +32,7 @@ export default function ProjectNavbar({ title, darkMode = false, onToggleTheme }
       </div>
 
       {/* Right - Home Button */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+      <div className="project-navbar-actions" style={{ display: 'flex', alignItems: 'center', gap: '12px', flexWrap: 'wrap', justifyContent: 'flex-end' }}>
         <button
           aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
           onClick={onToggleTheme}

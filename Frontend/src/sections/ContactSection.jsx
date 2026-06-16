@@ -4,7 +4,7 @@ import ContactInput from "../components/shared/ContactInput.jsx";
 
 export default function ContactSection() {
   return (
-    <section id="contact-me" style={{ background: "var(--page-bg)", padding: "100px 80px" }}>
+    <section id="contact-me" className="section-shell" style={{ background: "var(--page-bg)", padding: "100px 80px" }}>
       <div style={{ maxWidth: "800px", margin: "0 auto" }}>
         <ScrollReveal variant="fadeUp">
           <SectionHeader title="Contact me" subtitle="Cultivating Connections: Reach Out And Connect With Me" />
@@ -12,7 +12,7 @@ export default function ContactSection() {
 
         <div style={{ marginTop: "60px" }}>
           <ScrollReveal variant="fadeUp" delay={0.1}>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
+            <div className="contact-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px", marginBottom: "16px" }}>
               <ContactInput placeholder="Name" />
               <ContactInput placeholder="Email" />
               <ContactInput placeholder="Phone Number" />
