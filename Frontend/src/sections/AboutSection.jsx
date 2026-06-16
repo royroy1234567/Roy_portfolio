@@ -14,9 +14,9 @@ export default function AboutSection() {
           <SectionHeader title="About Me" subtitle="User Interface And User Experience And Also Adobe Editing" />
         </ScrollReveal>
 
-        <div className="about-layout" style={{ display: "flex", gap: "80px", alignItems: "flex-start", marginTop: "30px" }}>
+        <div className="about-layout" style={{ display: "flex", gap: "80px", alignItems: "flex-start", marginTop: "30px",  }}>
           {/* Image */}
-          <ScrollReveal variant="fadeRight" delay={0.1} className="about-image-shell" style={{ flex: "0 0 320px" }}>
+          <ScrollReveal variant="fadeRight" delay={0.1} className="about-image-shell" style={{ flex: "0 0 320px",    transform: "translateY(-100px)"  }}>
             <div className="about-image" style={{ width: "320px", height: "420px", background: "linear-gradient(145deg, var(--surface-bg), var(--surface-bg-alt))", border: "1px solid var(--border-color)", clipPath: "polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%)", position: "relative", overflow: "hidden" }}>
               <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: "60%", background: "linear-gradient(180deg, transparent, rgba(59,130,246,0.04))" }} />
               <img src={myImage} alt="Profile" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "grayscale(20%) brightness(90%)" }} />
@@ -44,7 +44,7 @@ export default function AboutSection() {
         </div>
 
         {/* Skill circles — each staggered */}
-        <div className="skill-grid" style={{ display: "flex", gap: "100px", marginTop: "50px", flexWrap: "wrap", marginLeft: "140px"  }}>
+        <div className="skill-grid" style={{ display: "flex", gap: "100px", marginTop: "-20px", flexWrap: "wrap", marginLeft: "140px"  }}>
           {SKILLS.map((skill, i) => (
             <ScrollReveal key={i} variant="fadeUp" delay={i * 0.1}>
               <SkillCircle skill={skill} />

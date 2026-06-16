@@ -1,7 +1,7 @@
 import { NAV_LINKS } from "../data/portfolioData.js";
 import ScrollReveal from "../components/ScrollReveal.jsx";
 
-const SOCIAL_ICONS = ["𝕏", "in", "Be", "Dr"];
+const SOCIAL_ICONS = ["F", "in", "IG"];
 
 export default function Footer() {
   return (
@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="footer-layout" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "48px", gap: "32px" }}>
             {/* Left */}
             <div className="footer-left">
-              <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "32px", color: "var(--accent-color)", letterSpacing: "4px", marginBottom: "16px" }}>MAHMOOD</div>
+              <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "32px", color: "var(--accent-color)", letterSpacing: "4px", marginBottom: "16px" }}>Carl Roy Gamilla</div>
               <div className="footer-links" style={{ display: "flex", gap: "24px", flexWrap: "wrap" }}>
                 {NAV_LINKS.map((link) => (
                   <a key={link} href={`#${link.toLowerCase().replace(/\s+/g, "-")}`}
@@ -34,8 +34,8 @@ export default function Footer() {
                   >{icon}</div>
                 ))}
               </div>
-              <p style={{ color: "var(--text-soft)", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", margin: "4px 0 0" }}>MahmoodFazile786@gmail.com</p>
-              <p style={{ color: "var(--text-soft)", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", margin: 0 }}>+93 729 307 085</p>
+              <p style={{ color: "var(--text-soft)", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", margin: "4px 0 0" }}>gcarlroy@gmail.com</p>
+              <p style={{ color: "var(--text-soft)", fontSize: "12px", fontFamily: "'DM Sans', sans-serif", margin: 0 }}>+63 992 769 1380</p>
             </div>
           </div>
         </ScrollReveal>
@@ -43,7 +43,7 @@ export default function Footer() {
         <ScrollReveal variant="fadeIn" delay={0.2}>
           <div style={{ borderTop: "1px solid var(--border-color)", paddingTop: "24px", textAlign: "center" }}>
             <p style={{ color: "var(--text-soft)", fontSize: "11px", fontFamily: "'DM Sans', sans-serif", margin: 0, letterSpacing: "1px" }}>
-              © 2024 MAHMOOD FAZILE — DESIGNED & BUILT WITH ♥
+              © 2026 Carl Roy Gamilla — DESIGNED & BUILT WITH ♥
             </p>
           </div>
         </ScrollReveal>
