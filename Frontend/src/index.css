@@ -192,6 +192,10 @@ body {
     justify-content: center;
   }
 
+  .hero-visual {
+    display: none !important;
+  }
+
   .hero-card {
     height: 360px !important;
   }

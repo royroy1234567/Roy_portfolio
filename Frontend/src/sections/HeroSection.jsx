@@ -65,7 +65,8 @@ const SOCIAL_ICONS = [
          <a  href={myCV}
               download="My_CV.pdf"
               style={{
-                background: "transparent", color: "var(--text-color)",border: "1px solid var(--border-color)",padding: "14px 36px",fontFamily: "'DM Sans', sans-serif",fontWeight: 400,fontSize: "13px", letterSpacing: "1.5px",cursor: "pointer",transition: "all 0.3s",textDecoration: "none",display: "inline-block"
+                background: "transparent", color: "var(--text-color)",border: "1px solid var(--border-color)",padding: "14px 36px",fontFamily: "'DM Sans', sans-serif",fontWeight: 400,fontSize: "13px", letterSpacing: "1.5px",cursor: "pointer",transition: "all 0.3s",textDecoration: "none",display: "inline-flex ", alignItems: "center", justifyContent: "center",
+
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = "var(--accent-color)";e.currentTarget.style.color = "var(--accent-color)";
               }} onMouseLeave={(e) => { e.currentTarget.style.borderColor = "var(--border-color)"; e.currentTarget.style.color = "var(--text-color)";
@@ -76,7 +77,7 @@ const SOCIAL_ICONS = [
           </ScrollReveal>
 
           <ScrollReveal variant="fadeUp" delay={0.45}>
-            <div className="hero-stats" style={{ display: "flex", gap: "48px", flexWrap: "wrap" }}>
+            <div className="  hero-stats" style={{ display: "flex", gap: "48px", flexWrap: "wrap" }}>
               {STATS.map((s, i) => (
                 <div key={i}>
                   <div style={{ fontFamily: "'Bebas Neue', cursive", fontSize: "40px", color: "var(--accent-color)", lineHeight: 1 }}>{s.value}</div>
