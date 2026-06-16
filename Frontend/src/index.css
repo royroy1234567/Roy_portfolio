@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+  color-scheme: dark;
+  --page-bg: #0a0a0a;
+  --page-bg-alt: #0d0d0d;
+  --surface-bg: #111111;
+  --surface-bg-alt: #181818;
+  --surface-elevated: #1f1f1f;
+  --border-color: #222222;
+  --border-soft: rgba(59,130,246,0.12);
+  --text-color: #f8fafc;
+  --text-muted: #cbd5e1;
+  --text-subtle: #888888;
+  --text-soft: #666666;
+  --accent-color: #3b82f6;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(59,130,246,0.08);
+  --accent-text: #000000;
+  --card-hover: #141414;
+  --input-bg: #111111;
+  --input-alt-bg: #0f172a;
+  --input-text: #f8fafc;
+  --input-border: #222222;
+  --shadow-color: 0 12px 40px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.08);
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #3b82f6;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+  --page-bg: #f8fafc;
+  --page-bg-alt: #ffffff;
+  --surface-bg: #ffffff;
+  --surface-bg-alt: #f1f5f9;
+  --surface-elevated: #eef2f7;
+  --border-color: #dbe3ee;
+  --border-soft: rgba(37,99,235,0.12);
+  --text-color: #0f172a;
+  --text-muted: #334155;
+  --text-subtle: #475569;
+  --text-soft: #64748b;
+  --accent-color: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-soft: rgba(37,99,235,0.08);
+  --accent-text: #ffffff;
+  --card-hover: #f8fbff;
+  --input-bg: #ffffff;
+  --input-alt-bg: #f8fafc;
+  --input-text: #0f172a;
+  --input-border: #cbd5e1;
+  --shadow-color: 0 12px 40px rgba(15,23,42,0.08), 0 2px 8px rgba(15,23,42,0.04);
+  --scrollbar-track: #f8fafc;
+  --scrollbar-thumb: #2563eb;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--page-bg);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 2px;
+}
+
+::placeholder {
+  color: var(--text-soft) !important;
+}
