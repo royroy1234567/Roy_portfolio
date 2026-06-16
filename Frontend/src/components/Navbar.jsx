@@ -21,6 +21,10 @@ export default function Navbar({ darkMode, onToggleTheme }) {
   }, []);
 
   const handleNavClick = () => setMenuOpen(false);
+  const handleThemeToggle = () => {
+    onToggleTheme();
+    setMenuOpen(false);
+  };
 
   return (
     <nav
@@ -52,27 +56,50 @@ export default function Navbar({ darkMode, onToggleTheme }) {
         Roy Gamilla
       </div>
 
-      <button
-        type="button"
-        className="nav-burger"
-        aria-label={menuOpen ? "Close menu" : "Open menu"}
-        aria-expanded={menuOpen}
-        onClick={() => setMenuOpen((prev) => !prev)}
-        style={{
-          display: "none",
-          width: "40px",
-          height: "40px",
-          borderRadius: "10px",
-          border: `1px solid ${theme.border}`,
-          background: theme.surface,
-          color: theme.text,
-          alignItems: "center",
-          justifyContent: "center",
-          cursor: "pointer",
-        }}
-      >
-        {menuOpen ? <X style={{ width: "18px", height: "18px", color: theme.accent }} /> : <Menu style={{ width: "18px", height: "18px", color: theme.accent }} />}
-      </button>
+      <div className="nav-mobile-controls" style={{ display: "none", alignItems: "center", gap: "10px" }}>
+        <button
+          type="button"
+          aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
+          onClick={handleThemeToggle}
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "10px",
+            border: `1px solid ${theme.border}`,
+            background: theme.surface,
+            color: theme.text,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+            transition: "all 0.3s",
+          }}
+        >
+          {darkMode ? <Sun style={{ width: "18px", height: "18px", color: theme.accent }} /> : <Moon style={{ width: "18px", height: "18px", color: theme.accent }} />}
+        </button>
+
+        <button
+          type="button"
+          className="nav-burger"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen((prev) => !prev)}
+          style={{
+            width: "40px",
+            height: "40px",
+            borderRadius: "10px",
+            border: `1px solid ${theme.border}`,
+            background: theme.surface,
+            color: theme.text,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            cursor: "pointer",
+          }}
+        >
+          {menuOpen ? <X style={{ width: "18px", height: "18px", color: theme.accent }} /> : <Menu style={{ width: "18px", height: "18px", color: theme.accent }} />}
+        </button>
+      </div>
 
       {/* Links */}
       <ul className="nav-links" style={{ display: "flex", gap: "36px", listStyle: "none", margin: 0, padding: 0, flexWrap: "wrap", justifyContent: "center" }}>
@@ -103,7 +130,7 @@ export default function Navbar({ darkMode, onToggleTheme }) {
         <button
           type="button"
           aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
-          onClick={onToggleTheme}
+          onClick={handleThemeToggle}
           style={{
             width: "40px",
             height: "40px",

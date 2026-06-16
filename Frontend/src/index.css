@@ -229,6 +229,10 @@ body {
 
   .nav-burger {
     display: flex !important;
+  }
+
+  .nav-mobile-controls {
+    display: flex !important;
     margin-left: auto;
   }
 

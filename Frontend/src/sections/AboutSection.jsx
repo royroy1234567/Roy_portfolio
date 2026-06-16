@@ -44,7 +44,7 @@ export default function AboutSection() {
         </div>
 
         {/* Skill circles — each staggered */}
-        <div className="skill-grid" style={{ display: "flex", gap: "100px", marginTop: "-20px", flexWrap: "wrap", marginLeft: "140px"  }}>
+        <div className="skill-grid" style={{ display: "flex", gap: "100px", marginTop: "10px", flexWrap: "wrap", marginLeft: "140px"  }}>
           {SKILLS.map((skill, i) => (
             <ScrollReveal key={i} variant="fadeUp" delay={i * 0.1}>
               <SkillCircle skill={skill} />
